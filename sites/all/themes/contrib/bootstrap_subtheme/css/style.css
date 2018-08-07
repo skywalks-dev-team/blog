@@ -1,0 +1,10 @@
+/**
+ * This file will be overwritten when the Bootstrap Framework source files
+ * are compiled using the Less CSS pre-processor.
+ */
+.main-banner{width: 100%;height: auto;margin-bottom: 15px;}
+.main-container{padding: 0;}
+.navbar{margin: 0;border-radius: 0;z-index: 100;background: #2229;width: 100%;}
+.navbar li a{padding:25px;}
+.navbar-header a{padding: 25px;}
+.navbar-header .logo{padding: 19px 0;margin: 0;}
