@@ -152,3 +152,29 @@ function skyblog_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
+function skyblog_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+    $form['search_block_form']['#prefix'] = '<div class="input-group mb-3">';
+    $form['search_block_form']['#suffix'] = '</div>';
+    $form['search_block_form']['#title'] = t('Search'); // Change the text on the label element
+    $form['search_block_form']['#attributes'] = array('class' => array('form-control'));
+    $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
+    $form['search_block_form']['#size'] = 40;  // define size of the textfield
+    $form['search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
+    $form['actions']['submit']['#prefix'] = '<div class="input-group-append">';
+    $form['actions']['submit']['#suffix'] = '</div>';
+    $form['actions']['submit']['#value'] = t('GO!'); // Change the text on the submit button
+    $form['actions']['submit']['#attributes'] = array('class' => array('btn btn-outline-secondary'));
+    // Add extra attributes to the text box
+    $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
+    $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
+    // Prevent user from searching the default text
+    $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+
+    // Alternative (HTML5) placeholder attribute instead of using the javascript
+    $form['search_block_form']['#attributes']['placeholder'] = t('Search');
+} 
+
+  // <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  // 
+  //   <button class="btn btn-outline-secondary" type="button">Button</button>
+  // </div>
