@@ -8,3 +8,4 @@
 .navbar li a{padding:25px;}
 .navbar-header a{padding: 25px;}
 .navbar-header .logo{padding: 19px 0;margin: 0;}
+.view-recent-blogs p{overflow: hidden;}
