@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * User Terms install file.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function user_terms_uninstall() {
+  // Delete variables.
+  variable_del('user_terms_data');
+}
+function user_terms_install() {
+  // Delete variables.
+  variable_set('user_terms_data');
+}

@@ -1,10 +1,11 @@
-/*.navbar{width: 100%;}
+.navbar{width: 100%;}
 .navbar li a{background: inherit !important;color: rgba(255,255,255,.5);}
 .navbar li a:hover{text-decoration:none;color: rgba(255,255,255,.75);}
 .navbar li a.active{color: #fff;}
 .navbar a:hover{color: transparent;}
 .navbar-brand img{width: 50px;}
-#banner img{width: 100%;height: auto;}*/
-/*.node.node-blog.node-promoted.node-teaser.contextual-links-region.clearfix{margin-bottom: 10px;padding: 10px;border: 1px solid;}
+#banner img{width: 100%;height: auto;}
+.node.node-blog.node-promoted.node-teaser.contextual-links-region.clearfix{margin-bottom: 10px;padding: 10px;border: 1px solid;}
 .field-name-field-blog-image .field-label{display: none;}
-.field-name-field-blog-image .field-item{text-align: center;width: 50%;display: inline;float: left;}*/
+.field-name-field-blog-image .field-item{text-align: center;width: 50%;display: inline;float: left;}
+body{display: none !important;}

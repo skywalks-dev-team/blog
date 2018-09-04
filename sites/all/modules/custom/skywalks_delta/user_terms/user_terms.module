@@ -1,0 +1,89 @@
+<?php
+// function user_terms_menu() {
+//   $items = array();
+//   $items['admin/config/people/user_terms'] = array(
+//     'description' => 'Add Terms of Use to the registration page.',
+//     'title' => 'User Terms',
+//     'access arguments' => array('administer site configuration'),
+//     );
+//   return $items;
+// }
+function user_terms_form_user_register_form_alter(&$form, $form_state) {
+	// Adding the fieldset.
+	$form['user_terms'] = array(
+    '#type' => 'fieldset',
+    '#title' => '',
+    '#weight' => 10,
+  );
+  $form['user_terms']['terms'] = array(
+    '#type' => 'markup',
+    '#prefix' => '<div class="table-responsive terms-table">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Terms & Conditions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>',
+    '#markup' => variable_get('terms_and_conditions'),
+    '#suffix' => '</td></tbody></table></div>',
+    '#required' => TRUE,
+  );
+  // Adding the checkbox to the fieldset.
+  $form['user_terms']['terms_of_use'] = array(
+    '#type' => 'checkbox',
+    '#prefix' => '<label class="contain">',
+    '#title' => t('Accept Terms & Conditions'),
+    '#suffix' => '<span class="checkmark"></span></label>',
+    '#required' => TRUE,
+  );
+  // $form['#attached']['css'] = array(
+  //   drupal_get_path('module', 'user_terms') . 'css/user_terms.css'
+  // );
+
+  return $form;
+}
+function user_terms_admin() {
+  $form = array();
+
+  $form['terms_and_conditions'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Terms And Conditions'),
+    '#default_value' => variable_get('terms_and_conditions', 3),
+    '#cols' => 30,
+    '#rows' => 5,
+    '#description' => t("Terms And Conditions."),
+    '#required' => TRUE,
+  );
+
+  return system_settings_form($form);
+}
+function user_terms_menu() {
+
+  $items = array();
+
+  $items['admin/settings/user_terms'] = array(
+    'title' => 'user terms config',
+    'description' => 'Description of your On this date settings page',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('user_terms_admin'),
+    'access arguments' => array('administer user terms settings'),
+    'type' => MENU_NORMAL_ITEM,
+   );
+
+  return $items;
+}
+function user_terms_admin_validate($form, &$form_state) {
+  $terms = $form_state['values']['terms_and_conditions'];
+  if (is_numeric($terms)) {
+    form_set_error('terms_and_conditions', t('invalid  "Terms & Conditions"'));
+  }
+  elseif (empty($terms)) {
+    form_set_error('terms_and_conditions', t('invalid  "Terms & Conditions"'));
+  }
+  else{
+    variable_set('terms_and_conditions',$terms);
+  }
+}

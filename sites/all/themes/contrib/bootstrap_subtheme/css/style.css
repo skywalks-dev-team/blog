@@ -9,3 +9,6 @@
 .navbar-header a{padding: 25px;}
 .navbar-header .logo{padding: 19px 0;margin: 0;}
 .view-recent-blogs p{overflow: hidden;}
+.table-responsive.terms-table{max-height: 100px;}
+.not-front .navbar-fixed-bottom, .navbar-fixed-top{position: relative;display: block;}
+.not-front header{top:0px !important;}

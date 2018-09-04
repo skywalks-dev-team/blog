@@ -1,0 +1,15 @@
+name = User Terms
+description = Adds terms of Use to the registration page.
+core = 7.x
+package = Skywalks
+
+stylesheets[all][] = css/user_terms.css
+; configure = admin/config/people/terms_of_use
+
+; files[] = tests/terms_of_use.test
+; Information added by drupal.org packaging script on 2012-07-10
+version = "7.x-0.1"
+core = "7.x"
+project = "user_terms"
+datestamp = ""
+

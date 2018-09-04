@@ -74,7 +74,8 @@
  * @ingroup templates
  */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>" <?php print $margin_if_admin; ?>>
+<?php print $margin_if_admin; ?>
+<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>" >
   <div class="<?php print $container_class; ?>">
     <div class="navbar-header">
       <?php if ($logo): ?>
@@ -173,3 +174,8 @@
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
+<script type="text/javascript">
+CKEDITOR.replace( 'editor1', {
+    filebrowserBrowseUrl: ''
+} );
+</script>

@@ -1,0 +1,16 @@
+name = Twilio Intelligence
+core = "7.x"
+description = "Integrates Twilio for phone call tracking and SMS notifications"
+package = Intelligence
+
+dependencies[] = intel
+dependencies[] = twilio
+dependencies[] = twilio_twiml
+
+
+; Information added by Drupal.org packaging script on 2017-04-21
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "intel"
+datestamp = "1492803845"
+

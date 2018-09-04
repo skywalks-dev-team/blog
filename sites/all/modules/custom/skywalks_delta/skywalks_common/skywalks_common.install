@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Skywalks common install file.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function skywalks_common_uninstall() {
+  // Delete variables.
+	variable_del('enable_skywalks_functions');
+}
+function skywalks_common_install() {
+  // Add variables.
+	variable_set('enable_skywalks_functions');
+}

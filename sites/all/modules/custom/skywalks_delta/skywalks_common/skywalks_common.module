@@ -1,0 +1,91 @@
+<?php
+
+/**
+ * @skywalks common functions 
+ *	
+ */
+
+function pr($var,$mode = 0){
+	if (variable_get('enable_skywalks_functions') == true) {
+		if ($mode == 0) {
+			echo "<pre>"; 
+			print_r($var);
+			echo "</pre>";
+		}
+		elseif ($mode == 1) {
+			echo "<pre>"; 
+			print_r(array_keys($var));
+			echo "</pre>";
+		}
+		else{
+			echo "<pre> Unrecognised print mode </pre>";
+		}
+	}
+	else{
+		drupal_set_message(t('Error : Call to desabled function pr() . Please enable skywalks common functions to use this function by clicking <a href="admin/settings/skywalks_common">here</a>'), 'error');
+	}
+}
+
+/**
+ * @skywalks common blocks
+ *	
+ */
+function skywalks_common_settings(){
+	$form = array();
+	$form['skywalks_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Enable common functions',
+    '#weight' => 10,
+  );
+	$form['skywalks_settings']['common'] = array(
+		'#type' => 'checkbox',
+		'#title' => t('Enable skywalks common functions'),
+		'#default_value' => variable_get('skywalks_settings'),
+		'#cols' => 30,
+		'#rows' => 5,
+		'#description' => t("enable skywalks functions"),
+		'#required' => FALSE,
+	);
+
+	return system_settings_form($form);
+}
+
+/**
+ * implements hook_menu()	
+ */
+
+function skywalks_common_menu() {
+	$items['admin/settings/skywalks_common'] = array(
+		'type' => MENU_NORMAL_ITEM,
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('skywalks_common_settings'),
+		'access arguments' => array('skywalks common settings'),
+		'description' => 'skywalks common settings',
+		'title' => 'Skywalks config',
+	);
+	return $items;
+}
+/**
+ * implements hook_block_info()	
+ */
+function skywalks_common_block_info() {
+	$blocks['contact_us'] = array(
+		'info' => t('Contact Form'),
+	);
+	return $blocks;
+}
+
+/**
+ * implements hook_block_view()	
+ */
+function skywalks_common_block_view($delta = '') {
+
+	$block = array();
+	switch ($delta) {
+		case 'contact_us':
+		$block['subject'] = t('CONTAT US');
+		$block['content'] = 'test';
+		break;
+	}
+	return $block;
+}

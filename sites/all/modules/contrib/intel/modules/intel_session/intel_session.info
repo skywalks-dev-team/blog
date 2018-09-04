@@ -1,0 +1,12 @@
+name = Intelligence session manager
+core = "7.x"
+description = "Provides session codes and other session management tools EXPERIMENTAL"
+package = Intelligence
+
+dependencies[] = intel
+; Information added by Drupal.org packaging script on 2017-04-21
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "intel"
+datestamp = "1492803845"
+
