@@ -1,0 +1,20 @@
+/**
+ * This file will be overwritten when the Bootstrap Framework source files
+ * are compiled using the Less CSS pre-processor.
+ */
+.main-banner{width: 100%;height: auto;margin-bottom: 15px;}
+.main-container{padding: 0;}
+.navbar{margin: 0;border-radius: 0;z-index: 100;background: #2229;width: 100%;}
+.navbar li a{padding:25px;}
+.navbar-header a{padding: 25px;}
+.navbar-header .logo{padding: 19px 0;margin: 0;}
+.view-recent-blogs p{overflow: hidden;}
+.table-responsive.terms-table{max-height: 100px;}
+.not-front .navbar-fixed-bottom, .navbar-fixed-top{position: relative;display: block;}
+.not-front header{top:0px !important;}
+body.page-sky-dashboard .navbar{display: none;}
+body.html.not-front.not-logged-in.no-sidebars.page-user header{display: none;}
+body.html.not-front.not-logged-in.no-sidebars.page-user .page-header{display: none;}
+body.html.not-front.not-logged-in.no-sidebars.page-user .tabs--primary.nav.nav-tabs{display: none;}
+body.html.not-front.not-logged-in.no-sidebars.page-user{background-repeat:no-repeat;backgroud-size:fill;background-image: url('../images/login.jpg');}
+.login-block{background-color: #fff;margin: 0 auto;width: 360px !important;height: 260px !important;    margin-left: -180px;left: 50%;}

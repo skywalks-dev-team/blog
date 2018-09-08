@@ -1,4 +1,4 @@
-name = 'bootstrap_subtheme'
+name = skywalks
 description = Uses the Bootstrap Framework Less source files and must be compiled (not for beginners).
 core = 7.x
 base theme = bootstrap
@@ -49,3 +49,4 @@ scripts[] = 'bootstrap/js/transition.js'
 
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''
+settings[foo_example] = blue bikeshed

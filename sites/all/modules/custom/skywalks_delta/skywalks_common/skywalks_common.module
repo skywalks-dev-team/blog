@@ -5,6 +5,18 @@
  *	
  */
 
+/**
+ * @skywalks common functions 
+ * implement hook_help
+ */
+function skywalks_common_help($path, $arg) {
+	switch ($path) {
+		case "admin/help#skywalks_common":
+		return t("skywalks common functions provides an easy to use environment seted up on your website"); 
+		break; 
+	}
+}
+
 function pr($var,$mode = 0){
 	if (variable_get('enable_skywalks_functions') == true) {
 		if ($mode == 0) {
@@ -30,13 +42,16 @@ function pr($var,$mode = 0){
  * @skywalks common blocks
  *	
  */
+function skywalks_common_dashboard(){
+}
+
 function skywalks_common_settings(){
 	$form = array();
 	$form['skywalks_settings'] = array(
-    '#type' => 'fieldset',
-    '#title' => 'Enable common functions',
-    '#weight' => 10,
-  );
+		'#type' => 'fieldset',
+		'#title' => 'Enable common functions',
+		'#weight' => 10,
+	);
 	$form['skywalks_settings']['common'] = array(
 		'#type' => 'checkbox',
 		'#title' => t('Enable skywalks common functions'),
@@ -63,11 +78,25 @@ function skywalks_common_menu() {
 		'description' => 'skywalks common settings',
 		'title' => 'Skywalks config',
 	);
+	$items['sky/dashboard'] = array(
+		'type' => MENU_NORMAL_ITEM,
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('skywalks_common_dashboard'),
+		'access arguments' => array('Dashboard'),
+		'description' => 'Skywalks Dashboard',
+		'title' => 'Dashboard',
+		'access arguments' => array('View the administrative dashboard'),
+		'type' => MENU_CALLBACK,
+	);
 	return $items;
 }
+
+
+
 /**
  * implements hook_block_info()	
  */
+
 function skywalks_common_block_info() {
 	$blocks['contact_us'] = array(
 		'info' => t('Contact Form'),
@@ -78,6 +107,7 @@ function skywalks_common_block_info() {
 /**
  * implements hook_block_view()	
  */
+
 function skywalks_common_block_view($delta = '') {
 
 	$block = array();

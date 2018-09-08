@@ -5,7 +5,7 @@
  * The primary PHP file for this theme.
  */
 
-function bootstrap_subtheme_preprocess_page(&$variables) {
+function skywalks_preprocess_page(&$variables) {
 	global $user;
 	if($user->uid == 1){
 		$variables['margin_if_admin'] = '<style type="text/css">
@@ -23,4 +23,21 @@ function bootstrap_subtheme_preprocess_page(&$variables) {
 	else{
 		$variables['margin_if_admin'] = '';
 	}
+}
+
+function skywalks_theme() {
+  $items = array();
+	
+  $items['user_login'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'skywalks') . '/templates',
+    'template' => 'user-login',
+    'preprocess functions' => array(
+       'skywalks_preprocess_user_login'
+    ),
+  );
+  return $items;
+}
+function skywalks_preprocess_user_login(&$vars) {
+  $vars['intro_text'] = t('LOGIN');
 }
