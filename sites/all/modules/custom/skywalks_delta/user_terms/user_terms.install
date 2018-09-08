@@ -12,6 +12,5 @@ function user_terms_uninstall() {
   variable_del('user_terms_data');
 }
 function user_terms_install() {
-  // Delete variables.
-  variable_set('user_terms_data');
+  variable_set('user_terms_data',0);
 }

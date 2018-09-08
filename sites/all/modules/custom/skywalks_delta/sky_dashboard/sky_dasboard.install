@@ -1,0 +1,10 @@
+<?php
+
+function sky_dashboard_uninstall() {
+  // Delete variables.
+	variable_del('enable_skywalks_dashboard');
+}
+function sky_dashboard_install() {
+  // Add variables.
+	variable_set('enable_skywalks_dashboard',0);
+}

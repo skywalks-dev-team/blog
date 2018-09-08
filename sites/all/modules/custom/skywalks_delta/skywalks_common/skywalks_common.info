@@ -1,7 +1,9 @@
 name = Skywalks common
 description = Adds skywalks common functions to the site
 core = 7.x
-package = Skywalks
+package = skywalks
+
+stylesheets[all][] = css/style.css
 
 version = "7.x-0.1"
 core = "7.x"

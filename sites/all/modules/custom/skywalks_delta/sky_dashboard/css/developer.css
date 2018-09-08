@@ -1,0 +1,10 @@
+.dropdown-menu{padding-left: 0 !important;}
+.drop-image img{width: 100px;text-align: center;display: block;position: relative;margin: auto;}
+.dash.dropdown-menu{background: #333;}
+.dash.dropdown-menu .user-li span{width:100%;display: block;padding: 5px;color: #fff !important;background: #649bef;font-weight: bold;text-align: center;}
+.dash.dropdown-menu .drop-btn{display: inline;padding: 5px 15px; width:50%;text-align: center;}
+.dash.dropdown-menu li{margin: 15px 0;}
+.dash.dropdown-menu .log-out{font-weight: bold;padding: 5px 30px;background: #da4444;margin: 0 5px;color:#fff;border-radius: 5px;}
+.dash.dropdown-menu .my-acc {font-weight: bold;background: #4cda44;margin: 0 5px;color:#fff;border-radius: 5px;}
+.dash.dropdown-menu li a:hover{background: inherit;}
+

@@ -1,0 +1,6 @@
+name = Skywalks Dashboard
+description = Skywalks alternative Dashboard.
+core = 7.x
+package = skywalks
+stylesheets[all][] = css/developer.css
+dependencies[] = skywalks_common 

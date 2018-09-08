@@ -13,5 +13,5 @@ function skywalks_common_uninstall() {
 }
 function skywalks_common_install() {
   // Add variables.
-	variable_set('enable_skywalks_functions');
+	variable_set('enable_skywalks_functions',0);
 }

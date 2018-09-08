@@ -42,8 +42,6 @@ function pr($var,$mode = 0){
  * @skywalks common blocks
  *	
  */
-function skywalks_common_dashboard(){
-}
 
 function skywalks_common_settings(){
 	$form = array();
@@ -55,12 +53,23 @@ function skywalks_common_settings(){
 	$form['skywalks_settings']['common'] = array(
 		'#type' => 'checkbox',
 		'#title' => t('Enable skywalks common functions'),
-		'#default_value' => variable_get('skywalks_settings'),
+		'#default_value' => variable_get('enable_skywalks_functions'),
 		'#cols' => 30,
 		'#rows' => 5,
 		'#description' => t("enable skywalks functions"),
 		'#required' => FALSE,
 	);
+	if (module_exists('sky_dashboard')) {
+	$form['skywalks_settings']['dashboard'] = array(
+		'#type' => 'checkbox',
+		'#title' => t('Enable skywalks Dashboard'),
+		'#default_value' => variable_get('enable_skywalks_dashboard'),
+		'#cols' => 30,
+		'#rows' => 5,
+		'#description' => t("enable skywalks Dashboard"),
+		'#required' => FALSE,
+	);
+	}
 
 	return system_settings_form($form);
 }
@@ -78,17 +87,20 @@ function skywalks_common_menu() {
 		'description' => 'skywalks common settings',
 		'title' => 'Skywalks config',
 	);
-	$items['sky/dashboard'] = array(
-		'type' => MENU_NORMAL_ITEM,
-		'page callback' => 'drupal_get_form',
-		'page arguments' => array('skywalks_common_dashboard'),
-		'access arguments' => array('Dashboard'),
-		'description' => 'Skywalks Dashboard',
-		'title' => 'Dashboard',
-		'access arguments' => array('View the administrative dashboard'),
-		'type' => MENU_CALLBACK,
-	);
 	return $items;
+}
+
+/**
+ * implements hook_permission()	
+ */
+
+function skywalks_common_permission() {
+	return array(
+		'access sky dashboard' => array(
+			'title' => t('Access Sky dashboard'),
+			'description' => t('Perform administration tasks for my module.'),
+		),
+	);
 }
 
 
@@ -118,4 +130,11 @@ function skywalks_common_block_view($delta = '') {
 		break;
 	}
 	return $block;
+}
+
+function skywalks_common_settings_validate($form, &$form_state) {
+	$common = $form_state['values']['common'];
+	$dashboard = $form_state['values']['dashboard'];
+	variable_set('enable_skywalks_functions',$common);
+	variable_set('enable_skywalks_dashboard',$dashboard);
 }
