@@ -28,7 +28,10 @@ regions[page_bottom]    = 'Page bottom'
 
 stylesheets[all][] = bootstrap/css/bootstrap.min.css
 stylesheets[all][] = css/style.css
-
+stylesheets[all][] = css/login.css
+stylesheets[all][] = css/vendor.bundle.base.css
+stylesheets[all][] = css/vendor.bundle.addons.css
+stylesheets[all][] = css/materialdesignicons.min.css
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
