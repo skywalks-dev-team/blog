@@ -39,6 +39,7 @@ function sky_dashboard_menu(){
     	'page arguments' => array('form_example_form'), //put the name of the form here
     	'access arguments' => array('Access Skywalks dashboard'),
     	'type' => MENU_NORMAL_ITEM,
+    	'access callback' => true,
 		);
 	return $items;
 }
