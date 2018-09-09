@@ -92,12 +92,13 @@
 			<?php print render($page['header']); ?>
 		</nav>
 	</header>
-</div>
-<div class="col-md-3 dash-menu">
-	<?php print render($page['sidebar_first']); ?>
-</div>
-<footer>
-	<div class="navbar bg-dark">
-		<?php print render($page['footer']); ?>
+
+	<div class="col-md-3 dash-menu">
+		<?php print render($page['sidebar_first']); ?>
 	</div>
-</footer>
+	<footer>
+		<div class="navbar bg-dark">
+			<?php print render($page['footer']); ?>
+		</div>
+	</footer>
+</div>
