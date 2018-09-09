@@ -16,7 +16,7 @@ body.page-sky-dashboard .navbar{display: none;}
 body.html.not-front.not-logged-in.no-sidebars.page-user header{display: none;}
 body.html.not-front.not-logged-in.no-sidebars.page-user .page-header{display: none;}
 body.html.not-front.not-logged-in.no-sidebars.page-user .tabs--primary.nav.nav-tabs{display: none;}
-body.html.not-front.not-logged-in.no-sidebars.page-user{background-repeat:no-repeat;backgroud-size:fill;background-image: url('../images/login.jpg');}
+body.html.not-front.not-logged-in.no-sidebars.page-user{background-repeat:no-repeat;background-size:cover;background-image: url('../images/login.jpg');}
 .login-block{background-color: #fff;margin: 0 auto;width: 360px !important;height: 260px !important;    margin-left: -180px;left: 50%;}
 .region.region-banner .carousel-inner img{width: 100%; height: auto;}
 .not-logged-in ul.menu.nav.navbar-nav li:nth-child(2){display: none;}
