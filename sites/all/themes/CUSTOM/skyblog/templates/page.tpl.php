@@ -84,6 +84,7 @@
  * @see bartik_process_page()
  * @see html.tpl.php
  */
+dash_access();
 ?>
 <div class="wrapper-all">
 	<header class="">

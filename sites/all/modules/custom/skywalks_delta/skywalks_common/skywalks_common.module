@@ -138,3 +138,13 @@ function skywalks_common_settings_validate($form, &$form_state) {
 	variable_set('enable_skywalks_functions',$common);
 	variable_set('enable_skywalks_dashboard',$dashboard);
 }
+
+function dash_access(){
+	if (user_is_logged_in()) {
+		return true;
+	}
+	else{
+		drupal_set_message('hiii');
+		drupal_goto('/user');
+	}
+}

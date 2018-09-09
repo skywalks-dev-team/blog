@@ -3,6 +3,7 @@
 * @file
 * Main page template.
 */
+dash_access();
 ?>
 
 <div id="branding" class="clearfix">
