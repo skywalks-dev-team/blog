@@ -144,7 +144,6 @@ function dash_access(){
 		return true;
 	}
 	else{
-		drupal_set_message('hiii');
 		drupal_goto('/user');
 	}
 }
