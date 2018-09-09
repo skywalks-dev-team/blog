@@ -83,7 +83,7 @@ function skywalks_common_menu() {
 		'type' => MENU_NORMAL_ITEM,
 		'page callback' => 'drupal_get_form',
 		'page arguments' => array('skywalks_common_settings'),
-		'access arguments' => array('skywalks common settings'),
+		'access arguments' => array('access sky functions'),
 		'description' => 'skywalks common settings',
 		'title' => 'Skywalks config',
 	);
@@ -96,9 +96,9 @@ function skywalks_common_menu() {
 
 function skywalks_common_permission() {
 	return array(
-		'access sky dashboard' => array(
-			'title' => t('Access Sky dashboard'),
-			'description' => t('Perform administration tasks for my module.'),
+		'access sky functions' => array(
+			'title' => t('Configure Sky functions'),
+			'description' => t('Access and configure skywalks functions'),
 		),
 	);
 }
