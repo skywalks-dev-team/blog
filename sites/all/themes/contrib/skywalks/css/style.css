@@ -32,3 +32,6 @@ a.text-small.forgot-password.text-black {text-decoration: none; text-align: cent
 /*.blog-wrapper .submitted span{z-index: 999;margin-top: 30px;display: block;}*/
 .blog-wrapper .thumbnail h2 a{font-family: serif; text-decoration: none; color: #343434;}
 .blog-wrapper .thumbnail h2{text-align:center;}
+section#block-views-new-blogs-block h2.block-title {margin-bottom: 25px;padding-bottom: 10px;border-bottom: 3px solid orange;}
+
+
