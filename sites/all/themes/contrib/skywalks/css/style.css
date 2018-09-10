@@ -25,8 +25,10 @@ a.text-small.forgot-password.text-black {text-decoration: none; text-align: cent
 .text-block.text-center.my-3 a.text-black.text-small{text-decoration: none;}
 .blog-wrapper .thumbnail .field-items img{height: 150px !important;width: auto !important;}
 .blog-wrapper .user-picture img{width: 60px !important;float: left;margin: 10px !important;}
-.blog-wrapper .thumbnail{padding: 10px !important;}
+.blog-wrapper .thumbnail{padding: 10px !important;height: 385px;box-shadow: 0px 0px 3px 0px #a9a9a9;background: #f9f9f9;}
+.blog-wrapper .thumbnail:hover{ transition: box-shadow 0.3s ease-in-out;box-shadow: 12px 6px 14px 0px #a9a9a9;}
 .blog-wrapper .thumbnail p{overflow: hidden !important;}
 .field.field-name-field-blog-image.field-type-image.field-label-hidden{display: block!important;width: 100%!important;margin-top: 40px!important;}
 /*.blog-wrapper .submitted span{z-index: 999;margin-top: 30px;display: block;}*/
-
+.blog-wrapper .thumbnail h2 a{font-family: serif; text-decoration: none; color: #343434;}
+.blog-wrapper .thumbnail h2{text-align:center;}
