@@ -23,4 +23,10 @@ body.html.not-front.not-logged-in.no-sidebars.page-user{background-repeat:no-rep
 .form-group.d-flex.justify-content-between{text-align: center !important;}
 a.text-small.forgot-password.text-black {text-decoration: none; text-align: center;margin: 0 auto;}
 .text-block.text-center.my-3 a.text-black.text-small{text-decoration: none;}
+.blog-wrapper .thumbnail .field-items img{height: 150px;width: auto;}
+.blog-wrapper .user-picture a img{width: 60px;float: left;margin: 10px;}
+.blog-wrapper .thumbnail{padding: 10px;}
+.blog-wrapper .thumbnail p{overflow: hidden;}
+.field.field-name-field-blog-image.field-type-image.field-label-hidden{display: block;width: 100%;margin-top: 40px;}
+
 
