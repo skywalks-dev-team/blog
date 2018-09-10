@@ -24,7 +24,7 @@ body.html.not-front.not-logged-in.no-sidebars.page-user{background-repeat:no-rep
 a.text-small.forgot-password.text-black {text-decoration: none; text-align: center;margin: 0 auto;}
 .text-block.text-center.my-3 a.text-black.text-small{text-decoration: none;}
 .blog-wrapper .thumbnail .field-items img{height: 150px !important;width: auto !important;}
-.blog-wrapper .user-picture img{width: 60px !important;border-radius: 20px;float: left;margin: 10px !important;}
+.blog-wrapper .user-picture img{height:60px;width: 60px !important;border-radius: 30px;float: left;margin: 10px !important;margin-top: -10px !important;}
 .blog-wrapper .thumbnail{transition: box-shadow 0.3s ease-in-out;padding: 10px !important;height: 385px;box-shadow: 0px 0px 3px 0px #a9a9a9;background: #f9f9f9;}
 .blog-wrapper .thumbnail:hover{ transition: box-shadow 0.3s ease-in-out;box-shadow: 12px 6px 14px 0px #a9a9a9;}
 .blog-wrapper .thumbnail p{overflow: hidden !important;}
@@ -37,5 +37,9 @@ section#block-views-new-blogs-block h2.block-title {margin-bottom: 25px;padding-
 a.top-log{padding: 9px !important;margin: 15px;border: 1px solid;border-radius: 5px;}
 footer.footer.container-fluid{padding: 15px 10px;background: #343434;color: #fff !important;}
 footer.footer.container-fluid a{text-decoration: none;font-weight: bold;}
+/* blog page comment */
+#comments .comment{box-shadow: 0px 0px 15px #a9a9a9;border: 1px solid #a9a6a6;padding: 15px;border-radius: 10px;}
+.comment .user-picture{width: 60px;height: 60px;}
+#comments h2.title{margin-bottom: 25px;padding-bottom: 10px;border-bottom: 3px solid orange;margin-top: 30px;border-top: 2px dotted orange;padding: 10px 0;}
 
 
