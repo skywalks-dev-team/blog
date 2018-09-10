@@ -97,6 +97,11 @@ dash_access();
 	<div class="col-md-3 dash-menu">
 		<?php print render($page['sidebar_first']); ?>
 	</div>
+	<div class="container">
+		<?php print render($page['highlighted']); ?>
+		<?php print render($page['help']); ?>
+		<?php print render($page['featured']); ?>
+	</div>
 	<footer>
 		<div class="navbar bg-dark">
 			<?php print render($page['footer']); ?>

@@ -19,6 +19,7 @@
   		}else{
   			$('.dash-menu').css("width", "");
   			$(".level-1").children("a").css("color","unset");
+        $(".level-2").children("a").css("color","initial");
   			$('.level-1').children("a.dropdown-toggle").css("width", "initial");
   			$('.level-1').children("a.dropdown-toggle").css("height", "initial");
   			$('.level-1').children("a").css("height", "initial");

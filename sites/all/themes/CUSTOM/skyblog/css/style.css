@@ -24,3 +24,12 @@ ul.tb-megamenu-nav.nav.level-0.items-6 li:hover{background: #222 !important;}
 li.tb-megamenu-item.level-1.mega.no-letter a{color: #263238;}
 li.tb-megamenu-item.level-1.mega.no-letter:hover,li.tb-megamenu-item.level-1.mega.no-letter a:hover{background-color: #263238 !important;}
 li.tb-megamenu-item.level-1.mega.no-letter svg{color: #fff !important;}
+li.tb-megamenu-item.level-1.mega.dropdown,
+li.tb-megamenu-item.level-1.mega,
+li.tb-megamenu-item.level-1.mega.mega-align-left,
+li.tb-megamenu-item.level-1.mega.active.active-trail,
+li.tb-megamenu-item.level-1.mega.active.active-trail{width: 100% !important;}
+.wrapper-all,body,html{height: 100% !important;}
+
+
+
