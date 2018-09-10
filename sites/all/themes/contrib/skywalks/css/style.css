@@ -33,5 +33,9 @@ a.text-small.forgot-password.text-black {text-decoration: none; text-align: cent
 .blog-wrapper .thumbnail h2 a{font-family: serif; text-decoration: none; color: #343434;}
 .blog-wrapper .thumbnail h2{text-align:center;}
 section#block-views-new-blogs-block h2.block-title {margin-bottom: 25px;padding-bottom: 10px;border-bottom: 3px solid orange;}
+.top-log i{padding-right: 10px}
+a.top-log{padding: 9px !important;margin: 15px;border: 1px solid;border-radius: 5px;}
+footer.footer.container-fluid{padding: 15px 10px;background: #343434;color: #fff !important;}
+footer.footer.container-fluid a{text-decoration: none;font-weight: bold;}
 
 

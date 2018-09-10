@@ -110,6 +110,13 @@
       <?php if (!empty($page['navigation'])): ?>
         <?php print render($page['navigation']); ?>
       <?php endif; ?>
+      <?php if (!user_is_logged_in()) {?>
+        <ul class="menu nav navbar-nav navbar-right">
+          <li>
+            <a class="top-log" href="/user"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i>Login</a>
+          </li>
+        </ul>
+      <?php } ?>
     </nav>
   </div>
 <?php endif; ?>
