@@ -4,7 +4,7 @@
  */
 .main-banner{width: 100%;height: auto;margin-bottom: 15px;}
 .main-container{padding: 0;}
-.navbar{margin: 0;border-radius: 0;z-index: 100;background: #2229;width: 100%;}
+.navbar{margin: 0;border-radius: 0;z-index: 100;background: #343434;width: 100%;}
 .navbar li a{padding:25px;}
 .navbar-header a{padding: 25px;}
 .navbar-header .logo{padding: 19px 0;margin: 0;}
@@ -20,6 +20,7 @@ body.html.not-front.not-logged-in.no-sidebars.page-user{background-repeat:no-rep
 .login-block{background-color: #fff;margin: 0 auto;width: 360px !important;height: 260px !important;    margin-left: -180px;left: 50%;}
 .region.region-banner .carousel-inner img{width: 100%; height: auto;}
 .not-logged-in ul.menu.nav.navbar-nav li:nth-child(2){display: none;}
-
-
+.form-group.d-flex.justify-content-between{text-align: center !important;}
+a.text-small.forgot-password.text-black {text-decoration: none; text-align: center;margin: 0 auto;}
+.text-block.text-center.my-3 a.text-black.text-small{text-decoration: none;}
 
