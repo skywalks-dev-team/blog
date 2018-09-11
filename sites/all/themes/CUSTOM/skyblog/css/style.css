@@ -30,6 +30,8 @@ li.tb-megamenu-item.level-1.mega.mega-align-left,
 li.tb-megamenu-item.level-1.mega.active.active-trail,
 li.tb-megamenu-item.level-1.mega.active.active-trail{width: 100% !important;}
 .wrapper-all,body,html{height: 100% !important;}
-
-
-
+li.tb-megamenu-item.level-1.no-letter.tb-1 a{color: transparent !important;}
+li.tb-megamenu-item.level-1.no-letter.tb-1 i.fa.fa-bars,
+li.tb-megamenu-item.level-2.mega i.fa.fa-desktop{color: #fff !important;}
+.dash-menu ul li a{color: #fff !important;}
+.dash-menu ul li a:hover{color: #bbb !important;}
