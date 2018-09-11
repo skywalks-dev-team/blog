@@ -23,6 +23,7 @@
         $("li.tb-megamenu-item.level-2.mega").children("a").css("color","#fff");
         $('.level-1').children("a.dropdown-toggle").css("width", "270px");
         $('.level-1').children("a.dropdown-toggle").css("height", "65px");
+        $('.level-1').children("a").css("height", "55px");
         
       }
   	})
