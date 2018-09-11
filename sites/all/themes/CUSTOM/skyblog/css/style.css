@@ -35,3 +35,6 @@ li.tb-megamenu-item.level-1.no-letter.tb-1 i.fa.fa-bars,
 li.tb-megamenu-item.level-2.mega i.fa.fa-desktop{color: #fff !important;}
 .dash-menu ul li a{color: #fff !important;}
 .dash-menu ul li a:hover{color: #bbb !important;}
+.dash-menu ul li.no-letter a{color: #fff !important;}
+.dash-menu ul li.no-letter a:hover{color: #bbb !important;}
+
