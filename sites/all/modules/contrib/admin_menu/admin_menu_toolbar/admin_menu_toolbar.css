@@ -27,11 +27,12 @@ body div#toolbar.toolbar {
  * We use a keyword for the toolbar font size to make it display consistently
  * across different themes, while still allowing browsers to resize the text.
  */
+ #admin-menu .dropdown a strong{color: #ff7640;}
 #admin-menu {
   font: normal small "Lucida Grande", Verdana, sans-serif;
-  -moz-box-shadow: 0px -1px 20px 1px #2ecfff;
-  -webkit-box-shadow: 0px -1px 20px 1px #2ecfff;
-  box-shadow: 0px -1px 20px 1px #2ecfff;
+  -moz-box-shadow: 0px -1px 7px 1px #555;
+  -webkit-box-shadow: 0px -1px 7px 1px #555;
+  box-shadow: 0px -1px 7px 1px #555;
   right: 0;
   width: auto;
 }
@@ -76,7 +77,7 @@ body div#toolbar.toolbar {
 }
 #admin-menu .dropdown .admin-menu-toolbar-category > a.active-trail {
   text-shadow: #333 0 1px 0;
-  background: #444;
+  background: #38c7ba;
 }
 #admin-menu .dropdown .admin-menu-toolbar-category > a:hover {
   background-color: #444;
