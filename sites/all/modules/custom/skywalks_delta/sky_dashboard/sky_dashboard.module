@@ -9,6 +9,12 @@ function sky_dashboard_block_info() {
     // Default setting.
 		'cache' => DRUPAL_CACHE_PER_ROLE,
 	);
+	$blocks['user_graph'] = array(
+    // The name that will appear in the block list.
+		'info' => t('user count graph'),
+    // Default setting.
+		'cache' => DRUPAL_CACHE_PER_ROLE,
+	);
 	return $blocks;
 }
 /**
@@ -21,6 +27,11 @@ function sky_dashboard_block_view($delta = '') {
 		case 'user_menu':
 		$block['subject'] = '';
 		$block['content'] = sky_user_profile();
+		break;
+		case 'user_graph':
+		$block['subject'] = '';
+		$block['content'] = user_count_graph();
+		break;
 	}
 	return $block;
 
@@ -53,15 +64,19 @@ function sky_user_profile(){
 	}else{
 		$img = $base_url."/".drupal_get_path('module', 'sky_dashboard')."/img/user.png";
 	}
-	$op = '<div style="width:300px;"><div class="nav-item  dropdown">
-	<button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-user"></i>
-	<span class=""></span></button>
-	<ul class="dash dropdown-menu">
-	<li class="user-li"><span href="#">'.$user->name.'</span></li>
-	<li class="drop-image"><a href="#"><img src="'.$img.'"></a></li>
-	<li style="margin: 20px 0px 5px;"><a class="drop-btn btn-danger" href="/user/logout">logout</a><a class="drop-btn btn-success" href="/user">My Accout</a></li>
-	</ul>
-	</div>
+	$op = '
+	<div style="width:300px;">
+		<div class="nav-item  dropdown">
+			<button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown">
+				<i class="fa fa-user"></i>
+				<span class=""></span>
+			</button>
+	    <ul class="dash dropdown-menu">
+	    	<li class="user-li"><span href="#">'.$user->name.'</span></li>
+	      <li class="drop-image"><a href="#"><img src="'.$img.'"></a></li>
+	      <li class="btn-container"><a class="btn btn-outline-danger" href="/user/logout">logout</a><a class="btn btn-outline-primary" href="/user">My Accout</a></li>
+	    </ul>
+	  </div>
 	</div>';
 	return $op;
 }
@@ -88,6 +103,44 @@ function sky_dashboard_permission() {
 		'access sky dashboard' => array(
 			'title' => t('Access Sky dashboard'),
 			'description' => t('Access skywalks dashboard'),
+		),
+	);
+}
+
+function user_count_graph(){
+	$week = date("Y-m-d h:i:sa",strtotime("-1 week"));
+	$month = date("Y-m-d h:i:sa",strtotime("-1 month"));
+	$last_weak = strtotime($week);
+	$month =  strtotime($month);
+
+	$user_last_weaks = db_select('users', 'uid')->fields('uid')->condition('created', $last_weak,'>')->condition('status', 1,'=')->execute()->fetchAll();
+	$user_last_weaks = count($user_last_weaks);
+
+	$user_last_month = db_select('users', 'uid')->fields('uid')->condition('created', $last_weak,'>')->condition('status', 1,'=')->execute()->fetchAll();
+	$user_last_month = count($user_last_month);
+
+	$total_user = db_select('users', 'uid')->fields('uid')->condition('status', 1,'=')->execute()->fetchAll();
+	$total_user = count($total_user);
+
+	return theme(
+		'user_graph', 
+		array(
+			'user_last_weaks' => $user_last_weaks, 
+			'user_last_month' => $user_last_month,
+			'total_user' => $total_user,
+		)
+	);
+}
+
+function sky_dashboard_theme() {
+	return array(
+		'user_graph' => array(
+			'variables' => array(
+				'user_last_weaks' => NULL,
+				'user_last_month' => NULL,
+				'total_user' => NULL
+			),
+			'template' => 'template/sky-graph',
 		),
 	);
 }

@@ -19,7 +19,7 @@ ul.tb-megamenu-subnav.mega-nav.level-1.items-3 li a:hover,ul.tb-megamenu-subnav.
 ul.tb-megamenu-nav.nav.level-0.items-6 li{width: 100%;}
 ul.tb-megamenu-nav.nav.level-0.items-6 li:hover{background: #222 !important;}
 .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child{width: 100%;}
-.dash-menu {max-width: 270px !important; height: calc(100% - 95px);background: #263238;background:#263238 !important;}
+.dash-menu {max-width: 270px !important; height: calc(100%);background: #263238;background:#263238 !important;}
 .tb-megamenu.style-black .nav > li > a:hover{background-color: #222 !important;}
 li.tb-megamenu-item.level-1.mega.no-letter a{color: #263238;}
 li.tb-megamenu-item.level-1.mega.no-letter:hover,li.tb-megamenu-item.level-1.mega.no-letter a:hover{background-color: #263238 !important;}
@@ -37,5 +37,5 @@ li.tb-megamenu-item.level-2.mega i.fa.fa-desktop{color: #fff !important;}
 .dash-menu ul li a:hover{color: #bbb !important;}
 .dash-menu ul li.no-letter a{color: #fff !important;}
 .dash-menu ul li.no-letter a:hover{color: #bbb !important;}
-
+.wrapper-content.row{height: calc(100% - 100px);}
 

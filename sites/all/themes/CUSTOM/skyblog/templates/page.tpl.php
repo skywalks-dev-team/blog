@@ -89,19 +89,25 @@ dash_access();
 <div class="wrapper-all">
 	<header class="">
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark text-secondary">
+			<a class="navbar-brand" href="<?php echo $front_page; ?>">
+				<i class="fa fa-home"></i>
+			</a>
 			<h3><?php print render($title); ?></h3>
 			<?php print render($page['header']); ?>
 		</nav>
 	</header>
-
-	<div class="col-md-3 dash-menu">
-		<?php print render($page['sidebar_first']); ?>
+	<div class="wrapper-content row">
+		<div id="dash-menu" class="dash-menu col-md-3">
+			<?php print render($page['sidebar_first']); ?>
+		</div>
+		<div class="col-md-5">
+			<?php print render($page['highlighted']); ?>
+			<?php print render($page['help']); ?>
+			<?php print render($page['featured']); ?>
+			<?php print render($page['content']); ?>
+		</div>
 	</div>
-	<div class="container">
-		<?php print render($page['highlighted']); ?>
-		<?php print render($page['help']); ?>
-		<?php print render($page['featured']); ?>
-	</div>
+	
 	<footer>
 		<div class="navbar bg-dark">
 			<?php print render($page['footer']); ?>
