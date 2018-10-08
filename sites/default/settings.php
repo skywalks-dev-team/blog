@@ -250,8 +250,8 @@ $databases = array (
     'default' => 
     array (
       'database' => 'blog',
-      'username' => 'root',
-      'password' => 'root',
+      'username' => 'skyflyuser',
+      'password' => 'OIKH()&GYU^FT',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
@@ -290,7 +290,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '7XRCuYFa6gc-GkDHc1U7iUDa4yd4Dum2cNLMDLiQ_U4';
+$drupal_hash_salt = 'HB6j5RN9dh7RuHC5X1rsAHtlF2iEIS2lGqMzBKUWH64';
 
 /**
  * Base URL (optional).
