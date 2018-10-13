@@ -1,5 +1,4 @@
 <?php drupal_add_css(drupal_get_path('theme', 'skywalks') . '/css/login.css'); ?>
-<p><?php print render($intro_text); ?></p>
 <div class="yourtheme-user-login-form-wrapper">
 	<?php hide($form['name']); ?>
 	<?php hide($form['pass']); ?>
@@ -12,6 +11,7 @@
 			<div class="row w-100">
 				<div class="col-lg-4 mx-auto">
 					<div class="auto-form-wrapper">	
+					<h2 class="text-center"><?php print render($intro_text); ?></h2>
 						<form action="/user" method="post" id="user-login" accept-charset="UTF-8">
 							<div class="form-group">
 								<label class="label">Username</label>

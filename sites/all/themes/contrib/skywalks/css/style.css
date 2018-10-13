@@ -38,7 +38,16 @@ a.top-log{padding: 9px !important;margin: 15px;border: 1px solid;border-radius: 
 footer.footer.container-fluid{padding: 15px 10px;background: #343434;color: #fff !important;}
 footer.footer.container-fluid a{text-decoration: none;font-weight: bold;}
 /* blog page comment */
-#comments .comment{box-shadow: 0px 0px 15px #a9a9a9;border: 1px solid #a9a6a6;padding: 15px;border-radius: 10px;}
+#comments .comment{margin: 10px 0;box-shadow: 0px 0px 15px #a9a9a9;border: 1px solid #a9a6a6;padding: 15px;border-radius: 10px;}
 .comment .user-picture{width: 60px;height: 60px;}
 #comments h2.title{margin-bottom: 25px;padding-bottom: 10px;border-bottom: 3px solid orange;margin-top: 30px;border-top: 2px dotted orange;padding: 10px 0;}
-
+.submitted .user-picture img{width: 50px;}
+#user-register-form{max-width:1000px;padding: 25px;background: #fff;margin: 15px auto;border-radius: 10px;}
+#user-register-form  .form-item {padding:0 25px;width: 50%;float: left;display: inline-block;}
+#edit-user-terms{width: 100%;padding: 25px;}
+#edit-user-terms #edit-user-terms-body .contain{width: 100%;}
+#user-register-form .form-item.form-item-pass-pass1.form-type-password.form-group.col-sm-6.col-md-4.has-feedback .progress{margin-top: 10px;}
+@media screen and (max-width: 768px){
+	#user-register-form  .form-item {padding:0 25px;width: 100%;float: unset;display: inherit;}
+	#edit-user-terms,#edit-user-terms #edit-user-terms-body .form-item{padding: 0;}
+}

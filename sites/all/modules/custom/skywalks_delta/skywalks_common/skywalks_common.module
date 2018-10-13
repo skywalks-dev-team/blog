@@ -59,7 +59,7 @@ function skywalks_common_settings(){
 		'#description' => t("enable skywalks functions"),
 		'#required' => FALSE,
 	);
-	if (module_exists('sky_dashboard')) {
+	if ((module_exists('sky_dashboard'))) {
 	$form['skywalks_settings']['dashboard'] = array(
 		'#type' => 'checkbox',
 		'#title' => t('Enable skywalks Dashboard'),

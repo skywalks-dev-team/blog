@@ -42,6 +42,7 @@ function sky_dashboard_block_view($delta = '') {
  * Prepares the contents of the block.
  */
 function sky_dashboard_menu(){
+	if ((variable_get("enable_skywalks_dashboard") == 1)) {
 	$items['sky/dashboard'] = array(
 		'type' => MENU_NORMAL_ITEM,
 		'access arguments' => array('skywalks common settings'),
@@ -53,6 +54,7 @@ function sky_dashboard_menu(){
     	'access callback' => TRUE,
 		);
 	return $items;
+	}
 }
 function sky_user_profile(){
 	global $user;

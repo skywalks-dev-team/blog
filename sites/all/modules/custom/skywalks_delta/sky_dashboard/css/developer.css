@@ -8,3 +8,6 @@
 .dash.dropdown-menu .my-acc {font-weight: bold;background: #4cda44;margin: 0 5px;color:#fff;border-radius: 5px;}
 /*.dash.dropdown-menu li a:hover{background: inherit;}*/
 .dash.dropdown-menu .btn{width: 100px;margin:2px; }
+
+#block-sky-dashboard-user-graph h2{padding: 10px 0;}
+#block-sky-dashboard-user-graph{text-align: center;margin-top: 15px;box-shadow: 0px 0px 8px 0px #d8d1d1;}
